@@ -160,6 +160,8 @@
     regexp: '^#?{{ item.parameter }}\s*='
     line: "{{ item.parameter }} = {{ item.value }}"
   with_items: "{{ auditd_config }}"
+  ignore_errors: True
+  #failed_when: "'FAILED' in command_result.stderr"
   when:
     - auditd_conf.stat.exists
     - audisp_remote_conf.stat.exists
