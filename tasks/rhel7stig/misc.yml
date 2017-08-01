@@ -19,6 +19,8 @@
   failed_when: autofs_check.rc not in [0,3,4]
   changed_when: False
   check_mode: no
+  ignore_errors: True
+  #failed_when: "'FAILED' in command_result.stderr"
   tags:
     - always
 
