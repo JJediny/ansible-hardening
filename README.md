@@ -1,5 +1,6 @@
 ansible-hardening
 =================
+[![CircleCI](https://circleci.com/gh/JJediny/ansible-hardening.svg?style=svg)](https://circleci.com/gh/JJediny/ansible-hardening)
 
 ![ansible-hardening-logo](doc/source/_static/ansible-hardening-logo.png)
 
@@ -14,7 +15,7 @@ to systems running the following distributions:
 * Red Hat Enterprise Linux 7
 * SUSE Linux Enterprise 12 (*experimental*)
 * Ubuntu 14.04 *(deprecated)*
-* Ubuntu 16.04
+* Ubuntu 16.04 
 
 For more details, review the
 [ansible-hardening documentation](http://docs.openstack.org/developer/ansible-hardening/).
