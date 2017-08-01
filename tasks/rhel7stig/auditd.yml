@@ -180,6 +180,8 @@
     name: auditd
     state: started
     enabled: yes
+  ignore_errors: True
+  #failed_when: "'FAILED' in command_result.stderr"
   when:
     - auditd_conf.stat.exists
   tags:

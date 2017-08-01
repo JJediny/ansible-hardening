@@ -50,6 +50,8 @@
   register: kdump_service_check
   failed_when: kdump_service_check.rc not in [0,3,4]
   changed_when: False
+  ignore_errors: True
+  #failed_when: "'FAILED' in command_result.stderr"
   check_mode: no
   tags:
     - kernel
