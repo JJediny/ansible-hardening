@@ -63,6 +63,8 @@
     name: kdump
     state: stopped
     enabled: no
+  ignore_errors: True
+  #failed_when: "'FAILED' in command_result.stderr"
   when:
     - kdump_service_check.rc not in [3,4]
     - security_disable_kdump

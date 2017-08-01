@@ -176,12 +176,12 @@
     - V-72093
 
 - name: Ensure auditd is running and enabled at boot time
+  ignore_errors: True
+  #failed_when: "'FAILED' in command_result.stderr"
   service:
     name: auditd
     state: started
     enabled: yes
-  ignore_errors: True
-  #failed_when: "'FAILED' in command_result.stderr"
   when:
     - auditd_conf.stat.exists
   tags:
