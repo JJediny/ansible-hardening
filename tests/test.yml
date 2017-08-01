@@ -28,6 +28,8 @@
         state: touch
       when: ansible_os_family == 'RedHat'
       changed_when: False
+      ignore_errors: True
+      #failed_when: "'FAILED' in command_result.stderr"
     - name: Install dconf package to test graphical session locks
       package:
         name: dconf
